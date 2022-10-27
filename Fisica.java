@@ -2,10 +2,6 @@
 public class Fisica extends Pessoa {
     private int cpf;
 
-    public Fisica() {
-
-    }
-
     public void setCPF(int cpf) throws CpfException {
         if (cpf < 0) {
             this.cpf = 0;

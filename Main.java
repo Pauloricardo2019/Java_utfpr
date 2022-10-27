@@ -45,7 +45,7 @@ public class Main {
                     if (cond.equalsIgnoreCase("f")) {
                         try {
                             f.setNome(l.entDados("Digite seu nome:.."));
-                            f.setDinheiro(Float.parseFloat(l.entDados("Digite a quantidade de dinheiro:..")));
+                            f.setDinheiro(Float.parseFloat(l.entDados("Digite seu capital:..")));
                             f.setIdade(Integer.parseInt(l.entDados("Digite sua idade:..")));
                             f.setGenero(l.entDados("Digite seu genero:.. <M/F>"));
                             f.setCPF(Integer.parseInt(l.entDados("Digite seu CPF:...")));
@@ -69,7 +69,7 @@ public class Main {
                     } else if (cond.equalsIgnoreCase("j")) {
                         try {
                             j.setNome(l.entDados("Digite seu nome:.."));
-                            j.setDinheiro(Float.parseFloat(l.entDados("Digite a quantidade de dinheiro:..")));
+                            j.setDinheiro(Float.parseFloat(l.entDados("Digite seu capital:..")));
                             j.setIdade(Integer.parseInt(l.entDados("Digite sua idade:..")));
                             j.setGenero(l.entDados("Digite seu genero:.. <M/F>"));
                             j.setCNPJ(Integer.parseInt(l.entDados("Digite seu CNPJ:...")));
@@ -149,7 +149,7 @@ public class Main {
                                 }
                             } catch (TurbinaException tex) {
                                 tex.errTurbina();
-                                break;
+                                continue;
                             }
                             break;
                         case 2:
@@ -167,7 +167,7 @@ public class Main {
                                 }
                             } catch (EixoException ext) {
                                 ext.errEixo();
-                                break;
+                                continue;
                             }
                             break;
                         case 3:
@@ -184,7 +184,7 @@ public class Main {
                                 }
                             } catch (PotenciaException ptx) {
                                 ptx.errPotencia();
-                                break;
+                                continue;
                             }
                             break;
                         case 4:
@@ -201,7 +201,7 @@ public class Main {
                                 }
                             } catch (PoraoException pxt) {
                                 pxt.errPorao();
-                                break;
+                                continue;
                             }
                         default:
                             System.out.println("Digite um valor válido!");
@@ -235,30 +235,30 @@ public class Main {
     public static void showVeiculos() {
         System.out.println("Aviao: ");
         System.out.println("Tipo: " + aviao.getTipo());
-        System.out.println("Velocidade: " + aviao.getVelocidade());
-        System.out.println("Carga maxima: " + aviao.getCargaMaxima());
-        System.out.println("Valor: " + aviao.getValorPadrao());
+        System.out.println("Velocidade: " + aviao.getVelocidade()+"Km/h");
+        System.out.println("Carga maxima: " + aviao.getCargaMaxima()+"Kg");
+        System.out.println("Valor: " + aviao.getValorPadrao()+"R$");
         System.out.println("\n");
 
         System.out.println("Caminhao: ");
         System.out.println("Tipo: " + caminhao.getTipo());
-        System.out.println("Velocidade: " + caminhao.getVelocidade());
-        System.out.println("Carga maxima: " + caminhao.getCargaMaxima());
-        System.out.println("Valor: " + caminhao.getValorPadrao());
+        System.out.println("Velocidade: " + caminhao.getVelocidade()+"Km/h");
+        System.out.println("Carga maxima: " + caminhao.getCargaMaxima()+"Kg");
+        System.out.println("Valor: " + caminhao.getValorPadrao()+"R$");
         System.out.println("\n");
 
         System.out.println("Carro: ");
         System.out.println("Tipo: " + carro.getTipo());
-        System.out.println("Velocidade: " + carro.getVelocidade());
-        System.out.println("Carga maxima: " + carro.getCargaMaxima());
-        System.out.println("Valor: " + carro.getValorPadrao());
+        System.out.println("Velocidade: " + carro.getVelocidade()+"Km/h");
+        System.out.println("Carga maxima: " + carro.getCargaMaxima()+"Kg");
+        System.out.println("Valor: " + carro.getValorPadrao()+"R$");
         System.out.println("\n");
 
         System.out.println("Navio: ");
         System.out.println("Tipo: " + navio.getTipo());
-        System.out.println("Velocidade: " + navio.getVelocidade());
-        System.out.println("Carga maxima: " + navio.getCargaMaxima());
-        System.out.println("Valor: " + navio.getValorPadrao());
+        System.out.println("Velocidade: " + navio.getVelocidade()+"Km/h");
+        System.out.println("Carga maxima: " + navio.getCargaMaxima()+"Kg");
+        System.out.println("Valor: " + navio.getValorPadrao()+"R$");
         System.out.println("\n");
     }
 
@@ -342,10 +342,10 @@ public class Main {
             System.out.println("\n\n");
             System.out.println("Nome: " + bdEncomenda.get(i).getNome());
             System.out.println("Descricao: " + bdEncomenda.get(i).getDescricao());
-            System.out.println("Distancia: " + bdEncomenda.get(i).getDistancia());
-            System.out.println("Peso: " + bdEncomenda.get(i).getPeso());
-            System.out.println("Valor: " + bdEncomenda.get(i).getValor());
-            System.out.println("Duracao: " + bdEncomenda.get(i).getDuracao());
+            System.out.println("Distancia: " + bdEncomenda.get(i).getDistancia()+"km");
+            System.out.println("Peso: " + bdEncomenda.get(i).getPeso()+"kg");
+            System.out.println("Valor: " + bdEncomenda.get(i).getValor()+"R$");
+            System.out.println("Duracao: " + bdEncomenda.get(i).getDuracao()+"Hora(s)");
         }
     }
 

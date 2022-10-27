@@ -160,8 +160,6 @@ public class Main {
                                 vel = caminhao.getVelocidade();
                                 cargaMaxima = caminhao.getCargaMaxima();
 
-                                System.out.println("velocidade: " + vel);
-
                                 if (caminhao.getEixo() == 2) {
                                     valor = caminhao.getValorPadrao();
                                     valor = (valor * 0.5);

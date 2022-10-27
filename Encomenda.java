@@ -33,7 +33,7 @@ public class Encomenda implements Calculo {
     }
 
     public float calcValor(int distancia, float valorPadrao) {
-        return (distancia + valorPadrao);
+        return ((distancia + valorPadrao) * 2);
     }
 
     public float calcTempo(int distancia, int velocidade) {

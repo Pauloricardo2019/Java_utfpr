@@ -1,6 +1,8 @@
-public interface Calculo{
+//Paulo Ricardo RA:2145332
+public interface Calculo {
 
-    public float calcValor(int distancia, int valorPadrao);
+    public float calcValor(int distancia, float valorPadrao);
 
-    public int calcTempo(int distancia, int velocidade);
+    public float calcTempo(int distancia, int velocidade);
+
 }

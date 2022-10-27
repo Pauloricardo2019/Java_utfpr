@@ -1,10 +1,12 @@
+
+//Paulo Ricardo RA:2145332
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.io.IOException;
 
-public class Leitura{
+public class Leitura {
 
-	public String entDados(String label){
+	public String entDados(String label) {
 
 		System.out.println(label);
 		String resp = "";
@@ -12,14 +14,12 @@ public class Leitura{
 		InputStreamReader teclado = new InputStreamReader(System.in);
 		BufferedReader buff = new BufferedReader(teclado);
 
-		try{
+		try {
 			resp = buff.readLine();
-		}
-		catch(IOException ioe){
+		} catch (IOException ioe) {
 			System.out.println("\nERRO");
 		}
 		return resp;
 	}
 
-	
-}//fim da classe
+}// fim da classe

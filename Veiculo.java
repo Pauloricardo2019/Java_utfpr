@@ -1,53 +1,54 @@
-public abstract class Veiculo{
+//Paulo Ricardo RA:2145332
+public abstract class Veiculo {
     protected String tipo;
     protected int velocidade;
     protected int cargaMaxima;
-    protected float valorPadrao;
+    protected double valorPadrao;
 
-    public Veiculo(){
+    public Veiculo() {
         this.tipo = "";
         this.velocidade = 0;
         this.cargaMaxima = 0;
         this.valorPadrao = 0;
     }
-    
-    public Veiculo(String tipo, int velocidade, int cargaMaxima, float valorPadrao){
+
+    public Veiculo(String tipo, int velocidade, int cargaMaxima, float valorPadrao) {
         this.tipo = tipo;
         this.velocidade = velocidade;
         this.cargaMaxima = cargaMaxima;
         this.valorPadrao = valorPadrao;
     }
 
-    public void setTipo(String tipo){
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 
-    public void setVelocidade(int velocidade){
+    public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
 
-    public void setCargaMaxima(int cargaMaxima){
+    public void setCargaMaxima(int cargaMaxima) {
         this.cargaMaxima = cargaMaxima;
     }
 
-    public void setValorPadrao(float valorPadrao){
+    public void setValorPadrao(double valorPadrao) {
         this.valorPadrao = valorPadrao;
     }
 
-    public String getTipo(){
+    public String getTipo() {
         return tipo;
     }
-    
-     public int getVelocidade(){
+
+    public int getVelocidade() {
         return velocidade;
     }
-    
-     public int getCargaMaxima(){
+
+    public int getCargaMaxima() {
         return cargaMaxima;
     }
 
-    public float getValorPadrao(){
+    public double getValorPadrao() {
         return valorPadrao;
     }
-    
+
 }

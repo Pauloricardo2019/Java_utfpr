@@ -1,10 +1,6 @@
 
 //Paulo Ricardo RA:2145332
-import java.util.List;
-import java.util.ArrayList;
-
 public class Main {
-    public static List<Encomenda> bdEncomenda = new ArrayList<Encomenda>();
     public static int vel;
     public static Leitura l = new Leitura();
     public static Aviao aviao = new Aviao();
@@ -14,6 +10,7 @@ public class Main {
     public static Fisica f = new Fisica();
     public static Juridica j = new Juridica();
     public static int cargaMaxima;
+    public static DbCollection db = new DbCollection();
 
     public static void main(String arg[]) {
 
@@ -217,7 +214,7 @@ public class Main {
 
                     break;
                 case 5:
-                    impEncomendas();
+                   db.impEncomendas();
                     break;
                 case 6:
                     continua = false;
@@ -277,8 +274,8 @@ public class Main {
                     .setDuracao(f.getEncomenda().calcTempo(f.getEncomenda().getDistancia(),
                             vel));
             f.setDinheiro((f.getDinheiro() - f.getEncomenda().getValor()));
-
-            bdEncomenda.add(f.getEncomenda());
+            
+            db.addEncomenda(f.getEncomenda());
         } catch (NumberFormatException nfx) {
             System.out.println("O valor deve ser um inteiro");
         } catch (NomeException nxt) {
@@ -315,7 +312,7 @@ public class Main {
                             vel));
             j.setDinheiro((j.getDinheiro() - j.getEncomenda().getValor()));
 
-            bdEncomenda.add(j.getEncomenda());
+            db.addEncomenda(j.getEncomenda());
 
         } catch (NumberFormatException nfx) {
             System.out.println("O valor deve ser um inteiro");
@@ -337,16 +334,6 @@ public class Main {
         return;
     }
 
-    public static void impEncomendas() {
-        for (int i = 0; i < bdEncomenda.size(); i++) {
-            System.out.println("\n\n");
-            System.out.println("Nome: " + bdEncomenda.get(i).getNome());
-            System.out.println("Descricao: " + bdEncomenda.get(i).getDescricao());
-            System.out.println("Distancia: " + bdEncomenda.get(i).getDistancia()+"km");
-            System.out.println("Peso: " + bdEncomenda.get(i).getPeso()+"kg");
-            System.out.println("Valor: " + bdEncomenda.get(i).getValor()+"R$");
-            System.out.println("Duracao: " + bdEncomenda.get(i).getDuracao()+"Hora(s)");
-        }
-    }
+
 
 }
